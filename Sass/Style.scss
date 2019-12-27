@@ -45,7 +45,7 @@ a {
  background-color: #566270;
  border-radius: 1000px;
  transition: 0.2s all ease-out;
- font-weight: 600;
+ font-weight: bold;
  color: #FFF;
 }
 
@@ -102,7 +102,7 @@ a {
 }
 
 /*******************
-         Header
+       Header
 *******************/
 
 header {
@@ -124,8 +124,14 @@ header {
    display: inline-block;
    margin-left: 1em;
    font-size: 1.2em;
-   font-weight: 600;
+   font-weight: bold;
    color: #919191;
+   transition: all 0.25s ease-out;
+  }
+
+  a:active {
+   font-weight: bold;
+   color: rgb(0, 0, 0);
   }
  }
  }
@@ -191,21 +197,22 @@ header {
    align-items: center;
 
   img {
-    height: 21px;
+    height: 19px;
+    margin: 0 auto 0.3em auto;
   }
 
   nav {
     margin: 0.5em auto;
 
     a {
-      font-size: 0.81em;
+     font-size: 0.81em;
     }
   }
   }
 }
 
  /*******************
-           Hero
+       Hero
 *******************/
 
 .Hero {
@@ -226,7 +233,7 @@ header {
 
  p {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   color: #000;
  }
@@ -275,16 +282,26 @@ header {
 
 @media (max-width: 375px) {
   .Hero {
+    height: 23em;
 
-    .Works h1 {
+    .Works {
+      margin-top: 2.5em;
+
+      h1 {
       font-size: 1.5em;
       padding: 0.6em 0.9em;
+      border: 4px solid #000;
     }
+
+    p {
+      font-size: 0.75em;
+    }
+   }
   }
 }
 
  /*******************
-           Work 
+        Work 
 *******************/
 
 .Grid {
@@ -318,12 +335,12 @@ header {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: rgba(#3A3F58, 0.8);
+   background-color: rgba(#3A3F58, 0.9);
    opacity: 0;
 
    h3 {
    color: #FFF;
-   font-weight: 600;
+   font-weight: bold;
    }
   }
 
@@ -364,8 +381,17 @@ header {
    } 
 }
 
- /*******************
-          About
+@media (max-width: 320px) {
+   .Grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 1%;
+    grid-row-gap: 0.4%;
+   } 
+}
+
+/*******************
+       About
 *******************/
 
 .About {
@@ -411,14 +437,15 @@ header {
   
   p {
    font-size: 1.1em;
-   font-weight: 400;
+   font-weight: normal;
   }
 
   a {
    color: #2653e3;
-   font-weight: 600;
+   font-weight: bold;
    font-size: 1.1em;
    align-self: flex-start;
+   transition: all 0.5s ease-in-out;
   }
  }
  }
@@ -507,9 +534,13 @@ header {
 @media (max-width: 386px) { 
  .About { 
   
+  .Title h6 {
+   font-size: 0.7em;
+  }
+
   .Left {
    h1 {
-    font-size: 1.4em;
+    font-size: 1em;
     width: 90%;
    }
   }
@@ -527,13 +558,13 @@ header {
 }
 
  /*******************
-            CTA
+        CTA
 *******************/
 
 .CTA {
  max-width: 100%;
  height: 33em;
- background: url('../Elements/Works/9.jpg') center no-repeat;
+ background: url('../Elements/Works/9.jpg') center no-repeat fixed;
  background-size: cover;
  display: flex;
  justify-content: center;
@@ -567,13 +598,13 @@ header {
  margin: 0 auto;
 
  h1 {
-  font-size: 2em;
+  font-size: 1.5em;
  }
 }
 }
 
  /*******************
-          Firms
+       Firms
 *******************/
 
 .Firms {
@@ -615,8 +646,17 @@ header {
 }
 }
 
- /*******************
-          Footer
+@media (max-width: 398px) {
+.Firms {
+  
+ img {
+   height: 7%;
+ }
+}
+}
+
+/*******************
+      Footer
 *******************/
 
 footer {
@@ -662,11 +702,12 @@ footer {
 @media (max-width: 391px) {
   footer {   
    img {
-    height: 17%;
+    height: 11%;
    }
 
    p {
-    margin-top: 8%;
+    font-size: 0.7em;
+    margin-top: 9%;
    }
   }
 }
