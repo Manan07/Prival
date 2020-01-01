@@ -129,9 +129,13 @@ header {
    transition: all 0.25s ease-out;
   }
 
+  a:first-child {
+   color: #3A3F58;
+  }
+
   a:active {
    font-weight: bold;
-   color: rgb(0, 0, 0);
+   color: $Primary-Color;
   }
  }
  }
@@ -158,7 +162,7 @@ header {
   header {
 
   img {
-    height: 24px;
+    height: 20px;
     margin-left: 2em;
   }
 
@@ -167,6 +171,8 @@ header {
 
     a {
       font-size: 1em;
+      margin-left: 0.7em;
+      font-size: 0.95em;
     }
   }
   }
@@ -266,6 +272,8 @@ header {
     .Works h1 {
       font-size: 2.1em;
       padding: 0.6em 0.9em;
+      border: 8px solid #000;
+      margin-top: 4.4em;
     }
   }
 }
@@ -307,7 +315,7 @@ header {
 .Grid {
  max-width: 91.2vw;
  height: 28em;
- margin: 6em auto 0 auto;
+ margin: 5.5em auto 0 auto;
  display: grid;
  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
  grid-column-gap: 1.35%;
@@ -364,6 +372,7 @@ header {
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 2.5%;
   grid-row-gap: 2.5%;
+  margin-top: 1em;
 
   .Overlay h3 {
    font-size: 1.2em;
@@ -564,7 +573,7 @@ header {
 .CTA {
  max-width: 100%;
  height: 33em;
- background: url('../Elements/Works/9.jpg') center no-repeat fixed;
+ background: url('../Elements/Works/9.jpg') center no-repeat;
  background-size: cover;
  display: flex;
  justify-content: center;
